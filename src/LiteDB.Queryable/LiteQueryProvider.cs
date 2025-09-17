@@ -6,7 +6,7 @@
 	using System.Threading;
 	using LiteDB.Async;
 
-	internal sealed class LiteQueryProvider<T> : IAsyncQueryProvider
+	public sealed class LiteQueryProvider<T> : IAsyncQueryProvider
 	{
 		private static readonly MethodInfo GenericCreateQueryMethod = typeof(LiteQueryProvider<T>).GetRuntimeMethods().Single(m => m.Name == "CreateQuery" && m.IsGenericMethod);
 		private static readonly MethodInfo GenericExecuteMethod = typeof(LiteQueryProvider<T>).GetRuntimeMethods().Single(m => m.Name == "Execute" && m.IsGenericMethod);

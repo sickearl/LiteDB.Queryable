@@ -7,7 +7,7 @@
 	using System.Linq.Expressions;
 	using System.Threading;
 
-	internal sealed class LiteQueryable<TResult> : IOrderedQueryable<TResult>, IAsyncEnumerable<TResult>
+	public sealed class LiteQueryable<TResult> : IOrderedQueryable<TResult>, IAsyncEnumerable<TResult>
 	{
 		private readonly IAsyncQueryProvider queryProvider;
 
